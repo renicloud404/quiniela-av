@@ -18,6 +18,7 @@ ingles: con que coincida cualquiera de los dos, basta (mas robusto).
 """
 
 import json
+import os
 import sys
 import unicodedata
 import urllib.error
@@ -77,6 +78,13 @@ def norm(texto):
 
 
 def leer_token():
+    """Token de la API. Lo busca en este orden:
+    1) Variable de entorno FOOTBALL_DATA_TOKEN  (la usa el robot de GitHub Actions).
+    2) .streamlit/secrets.toml                  (tu PC, como hasta ahora).
+    """
+    token_env = os.environ.get("FOOTBALL_DATA_TOKEN")
+    if token_env:
+        return token_env.strip()
     if tomllib and SECRETS.exists():
         with open(SECRETS, "rb") as fp:
             return tomllib.load(fp).get("football_data_token")

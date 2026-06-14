@@ -1,0 +1,45 @@
+name: Actualizar resultados
+
+# Cuando se ejecuta el robot:
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # cada 30 minutos (hora UTC). Puede demorarse unos minutos.
+  workflow_dispatch:          # boton para correrlo a mano desde la pestana Actions (probar)
+
+# Permiso para que el robot pueda hacer commit y push de los resultados.
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      # 1) Baja una copia del repositorio
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      # 2) Instala Python (el script solo usa la libreria estandar: nada de pip)
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 3) Corre el script. El token se pasa desde el secreto FOOTBALL_DATA_TOKEN.
+      - name: Actualizar resultados desde la API
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: python actualizar_resultados.py
+
+      # 4) Solo sube si DE VERDAD cambiaron los datos (evita commits vacios).
+      - name: Subir cambios solo si hubo resultados nuevos
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/partidos.json data/ranking_anterior.json
+            git commit -m "Resultados automaticos (GitHub Actions)"
+            git push
+            echo "Hubo cambios: resultados subidos."
+          else
+            echo "Sin cambios: no se hizo commit."
+          fi
