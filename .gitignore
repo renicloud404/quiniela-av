@@ -1,0 +1,34 @@
+# --- Secretos: la clave compartida NUNCA va a GitHub ---
+.streamlit/secrets.toml
+
+# --- Excel original: contiene correos y telefonos (datos PRIVADOS) ---
+Quiniela_Control.xlsx
+~$*.xlsx
+
+# --- Archivos temporales de pruebas ---
+_*.txt
+_*.json
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+
+# --- Entornos virtuales ---
+.venv/
+venv/
+env/
+
+# --- Editor / herramientas ---
+.idea/
+.vscode/
+.claude/
+
+# --- Referencias con copyright (capturas Telemundo/FIFA), NO las usa la app ---
+referencias/
+
+# --- Imagenes con copyright o pesadas que la app NO usa (usa las _web) ---
+assets/Copa.png
+assets/copa_web.png
+assets/Fondo_login.png
+assets/fondo_adentro.png

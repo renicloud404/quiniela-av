@@ -1,0 +1,722 @@
+[
+  {
+    "juego": 1,
+    "fecha": "2026-06-11",
+    "local": "México",
+    "visitante": "Sudáfrica",
+    "gl_real": 2,
+    "gv_real": 0,
+    "jugado": true,
+    "utc_date": "2026-06-11T19:00:00Z"
+  },
+  {
+    "juego": 2,
+    "fecha": "2026-06-11",
+    "local": "Corea del Sur",
+    "visitante": "Republica Checa",
+    "gl_real": 2,
+    "gv_real": 1,
+    "jugado": true,
+    "utc_date": "2026-06-12T02:00:00Z"
+  },
+  {
+    "juego": 3,
+    "fecha": "2026-06-12",
+    "local": "Canadá",
+    "visitante": "Bosnia y Herzegovina",
+    "gl_real": 1,
+    "gv_real": 1,
+    "jugado": true,
+    "utc_date": "2026-06-12T19:00:00Z"
+  },
+  {
+    "juego": 4,
+    "fecha": "2026-06-12",
+    "local": "Estados Unidos",
+    "visitante": "Paraguay",
+    "gl_real": 4,
+    "gv_real": 1,
+    "jugado": true,
+    "utc_date": "2026-06-13T01:00:00Z"
+  },
+  {
+    "juego": 5,
+    "fecha": "2026-06-13",
+    "local": "Catar",
+    "visitante": "Suiza",
+    "gl_real": 1,
+    "gv_real": 1,
+    "jugado": true,
+    "utc_date": "2026-06-13T19:00:00Z"
+  },
+  {
+    "juego": 6,
+    "fecha": "2026-06-13",
+    "local": "Brasil",
+    "visitante": "Marruecos",
+    "gl_real": 1,
+    "gv_real": 1,
+    "jugado": true,
+    "utc_date": "2026-06-13T22:00:00Z"
+  },
+  {
+    "juego": 7,
+    "fecha": "2026-06-13",
+    "local": "Haití",
+    "visitante": "Escocia",
+    "gl_real": 0,
+    "gv_real": 1,
+    "jugado": true,
+    "utc_date": "2026-06-14T01:00:00Z"
+  },
+  {
+    "juego": 8,
+    "fecha": "2026-06-14",
+    "local": "Australia",
+    "visitante": "Turquía",
+    "gl_real": 2,
+    "gv_real": 0,
+    "jugado": true,
+    "utc_date": "2026-06-14T04:00:00Z"
+  },
+  {
+    "juego": 9,
+    "fecha": "2026-06-14",
+    "local": "Alemania",
+    "visitante": "Curazao",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-14T17:00:00Z"
+  },
+  {
+    "juego": 10,
+    "fecha": "2026-06-14",
+    "local": "Países Bajos",
+    "visitante": "Japón",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-14T20:00:00Z"
+  },
+  {
+    "juego": 11,
+    "fecha": "2026-06-14",
+    "local": "Costa de Marfil",
+    "visitante": "Ecuador",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-14T23:00:00Z"
+  },
+  {
+    "juego": 12,
+    "fecha": "2026-06-14",
+    "local": "Suecia",
+    "visitante": "Túnez",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-15T02:00:00Z"
+  },
+  {
+    "juego": 13,
+    "fecha": "2026-06-15",
+    "local": "España",
+    "visitante": "Cabo Verde",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-15T16:00:00Z"
+  },
+  {
+    "juego": 14,
+    "fecha": "2026-06-15",
+    "local": "Bélgica",
+    "visitante": "Egipto",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-15T19:00:00Z"
+  },
+  {
+    "juego": 15,
+    "fecha": "2026-06-15",
+    "local": "Arabia Saudita",
+    "visitante": "Uruguay",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-15T22:00:00Z"
+  },
+  {
+    "juego": 16,
+    "fecha": "2026-06-15",
+    "local": "Irán",
+    "visitante": "Nueva Zelanda",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-16T01:00:00Z"
+  },
+  {
+    "juego": 17,
+    "fecha": "2026-06-16",
+    "local": "Francia",
+    "visitante": "Senegal",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-16T19:00:00Z"
+  },
+  {
+    "juego": 18,
+    "fecha": "2026-06-16",
+    "local": "Irak",
+    "visitante": "Noruega",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-16T22:00:00Z"
+  },
+  {
+    "juego": 19,
+    "fecha": "2026-06-16",
+    "local": "Argentina",
+    "visitante": "Argelia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-17T01:00:00Z"
+  },
+  {
+    "juego": 20,
+    "fecha": "2026-06-17",
+    "local": "Austria",
+    "visitante": "Jordania",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-17T04:00:00Z"
+  },
+  {
+    "juego": 21,
+    "fecha": "2026-06-17",
+    "local": "Portugal",
+    "visitante": "Rep. Dem. Congo",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-17T17:00:00Z"
+  },
+  {
+    "juego": 22,
+    "fecha": "2026-06-17",
+    "local": "Inglaterra",
+    "visitante": "Croacia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-17T20:00:00Z"
+  },
+  {
+    "juego": 23,
+    "fecha": "2026-06-17",
+    "local": "Ghana",
+    "visitante": "Panamá",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-17T23:00:00Z"
+  },
+  {
+    "juego": 24,
+    "fecha": "2026-06-17",
+    "local": "Uzbekistán",
+    "visitante": "Colombia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-18T02:00:00Z"
+  },
+  {
+    "juego": 25,
+    "fecha": "2026-06-18",
+    "local": "República Checa",
+    "visitante": "Sudáfrica",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-18T16:00:00Z"
+  },
+  {
+    "juego": 26,
+    "fecha": "2026-06-18",
+    "local": "Suiza",
+    "visitante": "Bosnia y Herzegovina",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-18T19:00:00Z"
+  },
+  {
+    "juego": 27,
+    "fecha": "2026-06-18",
+    "local": "Canadá",
+    "visitante": "Catar",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-18T22:00:00Z"
+  },
+  {
+    "juego": 28,
+    "fecha": "2026-06-18",
+    "local": "México",
+    "visitante": "Corea del Sur",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-19T01:00:00Z"
+  },
+  {
+    "juego": 29,
+    "fecha": "2026-06-19",
+    "local": "Estados Unidos",
+    "visitante": "Australia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-19T19:00:00Z"
+  },
+  {
+    "juego": 30,
+    "fecha": "2026-06-19",
+    "local": "Escocia",
+    "visitante": "Marruecos",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-19T22:00:00Z"
+  },
+  {
+    "juego": 31,
+    "fecha": "2026-06-19",
+    "local": "Brasil",
+    "visitante": "Haití",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-20T00:30:00Z"
+  },
+  {
+    "juego": 32,
+    "fecha": "2026-06-19",
+    "local": "Turquía",
+    "visitante": "Paraguay",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-20T03:00:00Z"
+  },
+  {
+    "juego": 33,
+    "fecha": "2026-06-20",
+    "local": "Países Bajos",
+    "visitante": "Suecia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-20T17:00:00Z"
+  },
+  {
+    "juego": 34,
+    "fecha": "2026-06-20",
+    "local": "Alemania",
+    "visitante": "Costa de Marfil",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-20T20:00:00Z"
+  },
+  {
+    "juego": 35,
+    "fecha": "2026-06-20",
+    "local": "Ecuador",
+    "visitante": "Curazao",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-21T00:00:00Z"
+  },
+  {
+    "juego": 36,
+    "fecha": "2026-06-21",
+    "local": "Túnez",
+    "visitante": "Japón",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-21T04:00:00Z"
+  },
+  {
+    "juego": 37,
+    "fecha": "2026-06-21",
+    "local": "España",
+    "visitante": "Arabia Saudita",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-21T16:00:00Z"
+  },
+  {
+    "juego": 38,
+    "fecha": "2026-06-21",
+    "local": "Bélgica",
+    "visitante": "Irán",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-21T19:00:00Z"
+  },
+  {
+    "juego": 39,
+    "fecha": "2026-06-21",
+    "local": "Uruguay",
+    "visitante": "Cabo Verde",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-21T22:00:00Z"
+  },
+  {
+    "juego": 40,
+    "fecha": "2026-06-21",
+    "local": "Nueva Zelanda",
+    "visitante": "Egipto",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-22T01:00:00Z"
+  },
+  {
+    "juego": 41,
+    "fecha": "2026-06-22",
+    "local": "Argentina",
+    "visitante": "Austria",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-22T17:00:00Z"
+  },
+  {
+    "juego": 42,
+    "fecha": "2026-06-22",
+    "local": "Francia",
+    "visitante": "Irak",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-22T21:00:00Z"
+  },
+  {
+    "juego": 43,
+    "fecha": "2026-06-22",
+    "local": "Noruega",
+    "visitante": "Senegal",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-23T00:00:00Z"
+  },
+  {
+    "juego": 44,
+    "fecha": "2026-06-22",
+    "local": "Jordania",
+    "visitante": "Argelia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-23T03:00:00Z"
+  },
+  {
+    "juego": 45,
+    "fecha": "2026-06-23",
+    "local": "Portugal",
+    "visitante": "Uzbekistán",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-23T17:00:00Z"
+  },
+  {
+    "juego": 46,
+    "fecha": "2026-06-23",
+    "local": "Inglaterra",
+    "visitante": "Ghana",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-23T20:00:00Z"
+  },
+  {
+    "juego": 47,
+    "fecha": "2026-06-23",
+    "local": "Panamá",
+    "visitante": "Croacia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-23T23:00:00Z"
+  },
+  {
+    "juego": 48,
+    "fecha": "2026-06-23",
+    "local": "Colombia",
+    "visitante": "Rep. Dem. Congo",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-24T02:00:00Z"
+  },
+  {
+    "juego": 49,
+    "fecha": "2026-06-24",
+    "local": "Suiza",
+    "visitante": "Canadá",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-24T19:00:00Z"
+  },
+  {
+    "juego": 50,
+    "fecha": "2026-06-24",
+    "local": "Bosnia y Herzegovina",
+    "visitante": "Catar",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-24T19:00:00Z"
+  },
+  {
+    "juego": 51,
+    "fecha": "2026-06-24",
+    "local": "Marruecos",
+    "visitante": "Haití",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-24T22:00:00Z"
+  },
+  {
+    "juego": 52,
+    "fecha": "2026-06-24",
+    "local": "Escocia",
+    "visitante": "Brasil",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-24T22:00:00Z"
+  },
+  {
+    "juego": 53,
+    "fecha": "2026-06-24",
+    "local": "Sudáfrica",
+    "visitante": "Corea del Sur",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-25T01:00:00Z"
+  },
+  {
+    "juego": 54,
+    "fecha": "2026-06-24",
+    "local": "República Checa",
+    "visitante": "México",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-25T01:00:00Z"
+  },
+  {
+    "juego": 55,
+    "fecha": "2026-06-25",
+    "local": "Curazao",
+    "visitante": "Costa de Marfil",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-25T20:00:00Z"
+  },
+  {
+    "juego": 56,
+    "fecha": "2026-06-25",
+    "local": "Ecuador",
+    "visitante": "Alemania",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-25T20:00:00Z"
+  },
+  {
+    "juego": 57,
+    "fecha": "2026-06-25",
+    "local": "Túnez",
+    "visitante": "Países Bajos",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-25T23:00:00Z"
+  },
+  {
+    "juego": 58,
+    "fecha": "2026-06-25",
+    "local": "Japón",
+    "visitante": "Suecia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-25T23:00:00Z"
+  },
+  {
+    "juego": 59,
+    "fecha": "2026-06-25",
+    "local": "Turquía",
+    "visitante": "Estados Unidos",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-26T02:00:00Z"
+  },
+  {
+    "juego": 60,
+    "fecha": "2026-06-25",
+    "local": "Paraguay",
+    "visitante": "Australia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-26T02:00:00Z"
+  },
+  {
+    "juego": 61,
+    "fecha": "2026-06-26",
+    "local": "Noruega",
+    "visitante": "Francia",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-26T19:00:00Z"
+  },
+  {
+    "juego": 62,
+    "fecha": "2026-06-26",
+    "local": "Senegal",
+    "visitante": "Irak",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-26T19:00:00Z"
+  },
+  {
+    "juego": 63,
+    "fecha": "2026-06-26",
+    "local": "Cabo Verde",
+    "visitante": "Arabia Saudita",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-27T00:00:00Z"
+  },
+  {
+    "juego": 64,
+    "fecha": "2026-06-26",
+    "local": "Uruguay",
+    "visitante": "España",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-27T00:00:00Z"
+  },
+  {
+    "juego": 65,
+    "fecha": "2026-06-26",
+    "local": "Nueva Zelanda",
+    "visitante": "Bélgica",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-27T03:00:00Z"
+  },
+  {
+    "juego": 66,
+    "fecha": "2026-06-26",
+    "local": "Egipto",
+    "visitante": "Irán",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-27T03:00:00Z"
+  },
+  {
+    "juego": 67,
+    "fecha": "2026-06-27",
+    "local": "Panamá",
+    "visitante": "Inglaterra",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-27T21:00:00Z"
+  },
+  {
+    "juego": 68,
+    "fecha": "2026-06-27",
+    "local": "Croacia",
+    "visitante": "Ghana",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-27T21:00:00Z"
+  },
+  {
+    "juego": 69,
+    "fecha": "2026-06-27",
+    "local": "Colombia",
+    "visitante": "Portugal",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-27T23:30:00Z"
+  },
+  {
+    "juego": 70,
+    "fecha": "2026-06-27",
+    "local": "Rep. Dem. Congo",
+    "visitante": "Uzbekistán",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-27T23:30:00Z"
+  },
+  {
+    "juego": 71,
+    "fecha": "2026-06-27",
+    "local": "Argelia",
+    "visitante": "Austria",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-28T02:00:00Z"
+  },
+  {
+    "juego": 72,
+    "fecha": "2026-06-27",
+    "local": "Jordania",
+    "visitante": "Argentina",
+    "gl_real": null,
+    "gv_real": null,
+    "jugado": false,
+    "utc_date": "2026-06-28T02:00:00Z"
+  }
+]
