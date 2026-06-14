@@ -9,6 +9,8 @@ no cambia. Este archivo trae ademas toda la capa visual (CSS) integrada.
 """
 
 import base64
+import hashlib
+import hmac
 import json
 import os
 from datetime import datetime, timedelta, timezone
@@ -593,6 +595,44 @@ def clave_compartida():
         return None
 
 
+# --------------------------------------------------------------------------
+# Sesion persistente: guardamos el usuario en la URL (?u=...&t=...) para que
+# la sesion sobreviva al refresco. El token "t" es un sello firmado con la
+# clave compartida: prueba que la persona paso por el login y no se puede
+# falsificar sin conocer la clave. Si cierran el navegador y entran a la URL
+# limpia (sin ?u=...), se pedira login de nuevo.
+# --------------------------------------------------------------------------
+def _token_para(usuario):
+    """Sello corto del usuario, firmado con la clave compartida (HMAC-SHA256)."""
+    clave = clave_compartida() or ""
+    firma = hmac.new(clave.encode(), usuario.encode(), hashlib.sha256)
+    return firma.hexdigest()[:16]
+
+
+def restaurar_sesion():
+    """Si la URL trae un usuario + token validos, vuelve a iniciar la sesion.
+    Esto es lo que hace que el login sobreviva al refrescar la pagina."""
+    if st.session_state.get("logueado"):
+        return
+    u = st.query_params.get("u")
+    t = st.query_params.get("t")
+    if u and t and u in USUARIOS and hmac.compare_digest(t, _token_para(u)):
+        st.session_state.logueado = True
+        st.session_state.jugador_id = USUARIOS[u]
+        st.session_state.usuario = u
+
+
+def recordar_en_url(usuario):
+    """Escribe el usuario y su token en la URL (para sobrevivir al refresco)."""
+    st.query_params["u"] = usuario
+    st.query_params["t"] = _token_para(usuario)
+
+
+def olvidar_url():
+    """Limpia la URL al cerrar sesion (borra ?u=...&t=...)."""
+    st.query_params.clear()
+
+
 def barra_superior(nombre):
     logo = f"<img src='data:image/png;base64,{LOGO_B64}'/>" if LOGO_B64 else "⚽"
     return f"""
@@ -634,6 +674,7 @@ def pantalla_login():
             st.session_state.logueado = True
             st.session_state.jugador_id = USUARIOS[u]
             st.session_state.usuario = u
+            recordar_en_url(u)  # deja la sesion en la URL: sobrevive al refresco
             st.rerun()
         else:
             st.error("Usuario o clave incorrectos. Revisa e intenta de nuevo. 🙂")
@@ -1012,6 +1053,8 @@ def pantalla_juegos_del_dia(jugadores, pronosticos, partidos):
 def main():
     css_base()
 
+    restaurar_sesion()  # si la URL trae sesion valida, la recupera (sobrevive al refresco)
+
     if not st.session_state.get("logueado"):
         css_login()
         pantalla_login()
@@ -1030,6 +1073,7 @@ def main():
         if st.button("⎋ Salir", key="logout_btn", use_container_width=True):
             for k in ("logueado", "jugador_id", "usuario"):
                 st.session_state.pop(k, None)
+            olvidar_url()  # borra la sesion de la URL para que no vuelva a entrar solo
             st.rerun()
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
