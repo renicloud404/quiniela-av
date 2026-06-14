@@ -32,3 +32,11 @@ assets/Copa.png
 assets/copa_web.png
 assets/Fondo_login.png
 assets/fondo_adentro.png
+
+# --- GIF fuente original (pesado, ~9 MB). La app usa el optimizado logo_login.gif ---
+assets/logo gif v2.gif
+assets/GIF_login logo.gif
+assets/Logo login gif.gif
+
+# --- Imagenes temporales de previsualizacion ---
+assets/_*.png

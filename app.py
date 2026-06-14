@@ -83,6 +83,7 @@ def _img_b64(path):
 
 LOGO_B64 = _img_b64(str(ASSETS / "Logo_av.png"))
 LOGO_RB_B64 = _img_b64(str(ASSETS / "logo_RB.png"))
+LOGO_LOGIN_GIF_B64 = _img_b64(str(ASSETS / "logo_login.gif"))  # animacion del login (optimizada)
 FONDO_LOGIN_B64 = _img_b64(str(ASSETS / "fondo_login_web.jpg"))
 FONDO_APP_B64 = _img_b64(str(ASSETS / "fondo_adentro_web.jpg"))
 
@@ -258,6 +259,10 @@ div[data-testid="column"] .stButton>button:hover{{ box-shadow:0 9px 22px rgba(19
 .stTabs [data-baseweb="tab-highlight"], .stTabs [data-baseweb="tab-border"]{{ display:none; }}
 
 .stSelectbox label{{ color:#fff !important; font-weight:600; }}
+
+/* Toggle "Por partido / Consolidado" legible sobre el fondo oscuro */
+[data-testid="stRadio"] label p{{ color:#eaf2ec !important; font-weight:600; }}
+[data-testid="stRadio"] [role="radiogroup"]{{ gap:14px; }}
 
 .welcome{{ color:#fff; font-family:'Poppins',sans-serif; font-weight:700;
   font-size:22px; margin:2px 0 12px; }}
@@ -647,8 +652,13 @@ def barra_superior(nombre):
 # LOGIN
 # --------------------------------------------------------------------------
 def pantalla_login():
-    av = (f"<img class='logo-av' src='data:image/png;base64,{LOGO_B64}'/>"
-          if LOGO_B64 else "")
+    # Logo animado (GIF). Si no esta, cae al logo PNG estatico de respaldo.
+    if LOGO_LOGIN_GIF_B64:
+        av = f"<img class='logo-av' src='data:image/gif;base64,{LOGO_LOGIN_GIF_B64}'/>"
+    elif LOGO_B64:
+        av = f"<img class='logo-av' src='data:image/png;base64,{LOGO_B64}'/>"
+    else:
+        av = ""
     st.markdown(
         f"<div class='hero'>{av}"
         f"<h1>Quiniela AV</h1><div class='sub'>Mundial 2026</div></div>",
@@ -987,6 +997,23 @@ def _bloque_partido(partido, pronosticos, nombre_por_id, con_puntos, titulo):
 # --------------------------------------------------------------------------
 def pantalla_puntos_por_juego(jugadores, pronosticos, partidos):
     st.markdown("<div class='welcome'>🎯 Puntos por juego</div>", unsafe_allow_html=True)
+
+    # Dos modos: "Por partido" (lo de siempre) y "Consolidado" (matriz nueva).
+    modo = st.radio(
+        "Modo de vista",
+        ["Por partido", "Consolidado"],
+        horizontal=True,
+        label_visibility="collapsed",
+        key="modo_puntos",
+    )
+    if modo == "Consolidado":
+        _vista_consolidada(jugadores, pronosticos, partidos)
+    else:
+        _vista_por_partido(jugadores, pronosticos, partidos)
+
+
+def _vista_por_partido(jugadores, pronosticos, partidos):
+    """Vista original: cada partido jugado como desplegable con los pronosticos."""
     st.markdown("<div class='legend' style='margin:0 0 10px'>Toca un partido jugado para ver "
                 "qué pronosticó y cuántos puntos sacó cada quien.</div>", unsafe_allow_html=True)
 
@@ -1004,6 +1031,149 @@ def pantalla_puntos_por_juego(jugadores, pronosticos, partidos):
                   f"{p['gl_real']}-{p['gv_real']} {eq(p['visitante'])}")
         bloques += _bloque_partido(p, pronosticos, nombre_por_id, True, titulo)
     st.markdown(bloques, unsafe_allow_html=True)
+
+
+# --------------------------------------------------------------------------
+# VISTA CONSOLIDADA: matriz jugadores x partidos (con scroll horizontal y
+# primera columna fija). Usa clases CSS propias (.matrix-wrap/.mtab) para no
+# afectar el resto de la app.
+# --------------------------------------------------------------------------
+LEYENDA_MATRIZ = (
+    "<div class='mleyenda'>"
+    "<span><i class='mchip mchip-3'></i> Marcador exacto</span>"
+    "<span><i class='mchip mchip-2'></i> Resultado correcto</span>"
+    "<span><i class='mchip mchip-0'></i> Fallo</span></div>"
+)
+
+
+def css_matriz():
+    """Estilos SOLO de la matriz consolidada. El scroll queda confinado a
+    .matrix-wrap; la primera columna (.scol) se queda fija al desplazar."""
+    st.markdown("""
+<style>
+.matrix-wrap{ background:#fff; border-radius:16px; padding:6px;
+  box-shadow:0 12px 30px rgba(0,0,0,.22);
+  overflow-x:auto; -webkit-overflow-scrolling:touch; max-width:100%; }
+.mleyenda{ display:flex; flex-wrap:wrap; gap:14px; margin:0 0 10px;
+  color:#dff0e5; font-size:12.5px; }
+.mleyenda span{ display:inline-flex; align-items:center; gap:6px; }
+.mchip{ width:16px; height:16px; border-radius:4px; display:inline-block;
+  border:1px solid rgba(0,0,0,.12); }
+.mchip-3{ background:#cdeccf; } .mchip-2{ background:#fbe7b6; } .mchip-0{ background:#eceff2; }
+
+.mtab{ border-collapse:separate; border-spacing:0; font-size:13px; }
+.mtab th, .mtab td{ padding:7px 8px; text-align:center; white-space:nowrap;
+  border-bottom:1px solid #eef0ee; }
+.mtab thead th{ background:var(--green-deep); color:#fff; font-weight:600;
+  font-size:11px; vertical-align:middle; }
+.mtab thead .mh{ display:flex; gap:3px; justify-content:center; align-items:center;
+  margin-bottom:2px; }
+.mtab thead .mh .flag{ height:12px; margin:0; }
+.mtab thead .mh-res{ font-family:'Poppins',sans-serif; font-weight:700; font-size:12px;
+  color:var(--gold); }
+.mtab thead .mh-res.napend{ color:#9fb4a6; }
+
+/* Primera columna FIJA (puntos + jugador) */
+.mtab th.scol, .mtab td.scol{ position:sticky; left:0; z-index:2; text-align:left;
+  width:160px; min-width:160px; white-space:normal; box-shadow:1px 0 0 #e3eae5; }
+.mtab td.scol{ background:#fff; color:#13211b; }
+.mtab tbody tr:nth-child(even) td.scol{ background:#f7faf8; }
+.mtab thead th.scol{ z-index:3; background:var(--green-deep); }
+.mtab .m-pts{ display:inline-block; min-width:24px; font-family:'Poppins',sans-serif;
+  font-weight:800; color:var(--green-deep); margin-right:6px; }
+.mtab td.scol .nm{ font-weight:600; }
+
+/* Celdas de pronostico, coloreadas por puntos */
+.mtab td.c3{ background:#cdeccf; color:#13211b; font-weight:700; }
+.mtab td.c2{ background:#fbe7b6; color:#13211b; }
+.mtab td.c0{ background:#eceff2; color:#8a939b; }
+.mtab td.cna{ background:#fff; color:#c2c8cf; }
+.mtab tbody tr:last-child td{ border-bottom:0; }
+</style>
+""", unsafe_allow_html=True)
+
+
+def _matriz_consolidada_html(jugadores, pronosticos, partidos, columnas):
+    """Arma la tabla matriz: filas = jugadores (orden por puntos, total a la
+    izquierda); columnas = partidos; cada celda = pronostico coloreado."""
+    tabla = generar_leaderboard(jugadores, pronosticos, partidos)
+    jug_por_id = {j["id"]: j for j in jugadores}
+
+    # Encabezado: una columna por partido (banderas + resultado real o '—').
+    ths = "<th class='scol'>Jugador</th>"
+    for p in columnas:
+        jugado = p["jugado"] and p["gl_real"] is not None and p["gv_real"] is not None
+        if jugado:
+            res = f"<div class='mh-res'>{p['gl_real']}-{p['gv_real']}</div>"
+        else:
+            res = "<div class='mh-res napend'>—</div>"
+        ths += (f"<th><div class='mh'>{bandera(p['local'])}{bandera(p['visitante'])}</div>"
+                f"{res}</th>")
+
+    filas = ""
+    for f in tabla:
+        pid = f["id"]
+        jug = jug_por_id.get(pid, {"nombre": f["nombre"]})
+        cabeza = (f"<td class='scol'><span class='m-pts'>{f['puntos']}</span>"
+                  f"{avatar_html(jug, 20)}<span class='nm'>{f['nombre']}</span></td>")
+        pron_por_juego = {x["juego"]: x for x in pronosticos.get(pid, [])}
+        celdas = ""
+        for p in columnas:
+            pron = pron_por_juego.get(p["juego"])
+            if pron is None or pron["gl"] is None or pron["gv"] is None:
+                pred = "—"
+            else:
+                pred = f"{pron['gl']}-{pron['gv']}"
+            jugado = p["jugado"] and p["gl_real"] is not None and p["gv_real"] is not None
+            if not jugado:
+                clase = "cna"                       # no jugado: sin color
+            elif pron is None:
+                clase = "c0"                         # jugado pero no pronostico: fallo
+            else:
+                pts = calcular_puntos(pron, p)
+                clase = "c3" if pts == 3 else "c2" if pts == 2 else "c0"
+            celdas += f"<td class='{clase}'>{pred}</td>"
+        filas += f"<tr>{cabeza}{celdas}</tr>"
+
+    return (f"<div class='matrix-wrap'><table class='mtab'><thead><tr>{ths}</tr></thead>"
+            f"<tbody>{filas}</tbody></table></div>")
+
+
+def _vista_consolidada(jugadores, pronosticos, partidos):
+    """Matriz de todos los pronosticos, con filtro por jornada."""
+    css_matriz()
+    st.markdown("<div class='legend' style='margin:0 0 10px'>Matriz de todos los pronósticos. "
+                "Desliza horizontalmente para ver más partidos; la columna del jugador queda "
+                "fija.</div>", unsafe_allow_html=True)
+
+    # Filtro por jornada. 'TODAS' = solo partidos jugados (la matriz crece sola).
+    fechas = sorted({p["fecha"] for p in partidos if p["fecha"]})
+    sel = st.selectbox(
+        "Filtrar por jornada",
+        ["TODAS"] + fechas,
+        format_func=lambda x: "Todas las jornadas (jugados)" if x == "TODAS" else fecha_bonita(x),
+        key="jornada_consolidado",
+    )
+
+    if sel == "TODAS":
+        columnas = [p for p in partidos
+                    if p["jugado"] and p["gl_real"] is not None and p["gv_real"] is not None]
+        columnas.sort(key=lambda p: p["juego"])
+        if not columnas:
+            st.markdown("<div class='summary'>Aún no hay partidos jugados para consolidar.</div>",
+                        unsafe_allow_html=True)
+            return
+    else:
+        columnas = [p for p in partidos if p["fecha"] == sel]
+        columnas.sort(key=lambda p: (hora_local(p.get("utc_date")) or datetime.min, p["juego"]))
+        if not columnas:
+            st.markdown("<div class='summary'>No hay partidos en esa jornada.</div>",
+                        unsafe_allow_html=True)
+            return
+
+    st.markdown(LEYENDA_MATRIZ, unsafe_allow_html=True)
+    st.markdown(_matriz_consolidada_html(jugadores, pronosticos, partidos, columnas),
+                unsafe_allow_html=True)
 
 
 # --------------------------------------------------------------------------
