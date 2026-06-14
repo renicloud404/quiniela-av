@@ -84,9 +84,9 @@
     "fecha": "2026-06-14",
     "local": "Alemania",
     "visitante": "Curazao",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 7,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-14T17:00:00Z"
   },
   {
@@ -94,9 +94,9 @@
     "fecha": "2026-06-14",
     "local": "Países Bajos",
     "visitante": "Japón",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 2,
+    "gv_real": 2,
+    "jugado": true,
     "utc_date": "2026-06-14T20:00:00Z"
   },
   {
