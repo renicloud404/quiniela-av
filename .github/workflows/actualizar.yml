@@ -3,7 +3,11 @@ name: Actualizar resultados
 # Cuando se ejecuta el robot:
 on:
   schedule:
-    - cron: "*/30 * * * *"   # cada 30 minutos (hora UTC). Puede demorarse unos minutos.
+    # Cada 30 minutos, en los minutos :05 y :35 (hora UTC). Se evitan a proposito
+    # los minutos :00 y :30 porque son los mas congestionados de GitHub y ahi los
+    # workflows programados se retrasan o se saltan. GitHub igual puede demorarse
+    # unos minutos: es normal, no corre como reloj exacto.
+    - cron: "5,35 * * * *"
   workflow_dispatch:          # boton para correrlo a mano desde la pestana Actions (probar)
 
 # Permiso para que el robot pueda hacer commit y push de los resultados.
