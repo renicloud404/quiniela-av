@@ -104,9 +104,9 @@
     "fecha": "2026-06-14",
     "local": "Costa de Marfil",
     "visitante": "Ecuador",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 1,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-14T23:00:00Z"
   },
   {
@@ -114,9 +114,9 @@
     "fecha": "2026-06-14",
     "local": "Suecia",
     "visitante": "Túnez",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 5,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-15T02:00:00Z"
   },
   {
