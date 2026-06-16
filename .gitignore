@@ -1,8 +1,8 @@
 # --- Secretos: la clave compartida NUNCA va a GitHub ---
 .streamlit/secrets.toml
 
-# --- Excel original: contiene correos y telefonos (datos PRIVADOS) ---
-Quiniela_Control.xlsx
+# --- Excel: contienen correos y telefonos (datos PRIVADOS). Se excluyen TODOS ---
+*.xlsx
 ~$*.xlsx
 
 # --- Archivos temporales de pruebas ---

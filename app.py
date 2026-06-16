@@ -49,6 +49,7 @@ USUARIOS = {
     "gustavo": "Gustavo",
     "sofia": "Sofia",
     "gabriel": "Gabriel F",
+    "gabrielc": "Gabriel C",
     "marielys": "Marielys",
     "pedro": "Pedro M",
     "yimys1": "Yimys 1",

@@ -20,7 +20,7 @@
   {
     "id": "Diego",
     "numero": 5,
-    "nombre": "Diego Jacques Alexandre",
+    "nombre": "Diego J",
     "pago": false
   },
   {
@@ -38,7 +38,7 @@
   {
     "id": "Gustavo",
     "numero": 8,
-    "nombre": "Gustavo Gabaldon Roosen",
+    "nombre": "Gustavo",
     "pago": false
   },
   {
@@ -147,6 +147,12 @@
     "id": "Renzo",
     "numero": null,
     "nombre": "Renzo",
+    "pago": false
+  },
+  {
+    "id": "Gabriel C",
+    "numero": null,
+    "nombre": "Gabriel Cabral",
     "pago": false
   }
 ]
