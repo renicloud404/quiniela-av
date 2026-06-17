@@ -204,9 +204,9 @@
     "fecha": "2026-06-17",
     "local": "Portugal",
     "visitante": "Rep. Dem. Congo",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 1,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-17T17:00:00Z"
   },
   {
