@@ -214,9 +214,9 @@
     "fecha": "2026-06-17",
     "local": "Inglaterra",
     "visitante": "Croacia",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 4,
+    "gv_real": 2,
+    "jugado": true,
     "utc_date": "2026-06-17T20:00:00Z"
   },
   {
