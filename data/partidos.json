@@ -174,9 +174,9 @@
     "fecha": "2026-06-16",
     "local": "Irak",
     "visitante": "Noruega",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 1,
+    "gv_real": 4,
+    "jugado": true,
     "utc_date": "2026-06-16T22:00:00Z"
   },
   {
@@ -184,9 +184,9 @@
     "fecha": "2026-06-16",
     "local": "Argentina",
     "visitante": "Argelia",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 3,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-17T01:00:00Z"
   },
   {
@@ -194,9 +194,9 @@
     "fecha": "2026-06-17",
     "local": "Austria",
     "visitante": "Jordania",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 3,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-17T04:00:00Z"
   },
   {
