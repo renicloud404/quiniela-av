@@ -264,9 +264,9 @@
     "fecha": "2026-06-18",
     "local": "Canadá",
     "visitante": "Catar",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 6,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-18T22:00:00Z"
   },
   {
@@ -274,9 +274,9 @@
     "fecha": "2026-06-18",
     "local": "México",
     "visitante": "Corea del Sur",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 1,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-19T01:00:00Z"
   },
   {
