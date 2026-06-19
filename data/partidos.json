@@ -284,9 +284,9 @@
     "fecha": "2026-06-19",
     "local": "Estados Unidos",
     "visitante": "Australia",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 2,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-19T19:00:00Z"
   },
   {
