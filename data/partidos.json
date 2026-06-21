@@ -364,9 +364,9 @@
     "fecha": "2026-06-21",
     "local": "España",
     "visitante": "Arabia Saudita",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 4,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-21T16:00:00Z"
   },
   {
@@ -374,9 +374,9 @@
     "fecha": "2026-06-21",
     "local": "Bélgica",
     "visitante": "Irán",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 0,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-21T19:00:00Z"
   },
   {
