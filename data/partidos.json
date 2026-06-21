@@ -334,9 +334,9 @@
     "fecha": "2026-06-20",
     "local": "Alemania",
     "visitante": "Costa de Marfil",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 2,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-20T20:00:00Z"
   },
   {
@@ -344,9 +344,9 @@
     "fecha": "2026-06-20",
     "local": "Ecuador",
     "visitante": "Curazao",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 0,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-21T00:00:00Z"
   },
   {
@@ -354,9 +354,9 @@
     "fecha": "2026-06-21",
     "local": "Túnez",
     "visitante": "Japón",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 0,
+    "gv_real": 4,
+    "jugado": true,
     "utc_date": "2026-06-21T04:00:00Z"
   },
   {
