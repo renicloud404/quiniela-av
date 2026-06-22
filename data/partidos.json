@@ -404,9 +404,9 @@
     "fecha": "2026-06-22",
     "local": "Argentina",
     "visitante": "Austria",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 2,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-22T17:00:00Z"
   },
   {
