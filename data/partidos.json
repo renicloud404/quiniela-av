@@ -384,9 +384,9 @@
     "fecha": "2026-06-21",
     "local": "Uruguay",
     "visitante": "Cabo Verde",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 2,
+    "gv_real": 2,
+    "jugado": true,
     "utc_date": "2026-06-21T22:00:00Z"
   },
   {
@@ -394,9 +394,9 @@
     "fecha": "2026-06-21",
     "local": "Nueva Zelanda",
     "visitante": "Egipto",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 1,
+    "gv_real": 3,
+    "jugado": true,
     "utc_date": "2026-06-22T01:00:00Z"
   },
   {
