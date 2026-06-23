@@ -444,9 +444,9 @@
     "fecha": "2026-06-23",
     "local": "Portugal",
     "visitante": "Uzbekistán",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 5,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-23T17:00:00Z"
   },
   {
@@ -454,9 +454,9 @@
     "fecha": "2026-06-23",
     "local": "Inglaterra",
     "visitante": "Ghana",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 0,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-23T20:00:00Z"
   },
   {
