@@ -434,9 +434,9 @@
     "fecha": "2026-06-22",
     "local": "Jordania",
     "visitante": "Argelia",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 1,
+    "gv_real": 2,
+    "jugado": true,
     "utc_date": "2026-06-23T03:00:00Z"
   },
   {
