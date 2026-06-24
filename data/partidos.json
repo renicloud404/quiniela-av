@@ -484,9 +484,9 @@
     "fecha": "2026-06-24",
     "local": "Suiza",
     "visitante": "Canadá",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 2,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-24T19:00:00Z"
   },
   {
@@ -494,9 +494,9 @@
     "fecha": "2026-06-24",
     "local": "Bosnia y Herzegovina",
     "visitante": "Catar",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 3,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-24T19:00:00Z"
   },
   {
