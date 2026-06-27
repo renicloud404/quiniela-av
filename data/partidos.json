@@ -624,9 +624,9 @@
     "fecha": "2026-06-26",
     "local": "Cabo Verde",
     "visitante": "Arabia Saudita",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 0,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-27T00:00:00Z"
   },
   {
@@ -634,9 +634,9 @@
     "fecha": "2026-06-26",
     "local": "Uruguay",
     "visitante": "España",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 0,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-27T00:00:00Z"
   },
   {
@@ -644,9 +644,9 @@
     "fecha": "2026-06-26",
     "local": "Nueva Zelanda",
     "visitante": "Bélgica",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 1,
+    "gv_real": 5,
+    "jugado": true,
     "utc_date": "2026-06-27T03:00:00Z"
   },
   {
@@ -654,9 +654,9 @@
     "fecha": "2026-06-26",
     "local": "Egipto",
     "visitante": "Irán",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 1,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-27T03:00:00Z"
   },
   {
