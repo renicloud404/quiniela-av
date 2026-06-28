@@ -664,9 +664,9 @@
     "fecha": "2026-06-27",
     "local": "Panamá",
     "visitante": "Inglaterra",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 0,
+    "gv_real": 2,
+    "jugado": true,
     "utc_date": "2026-06-27T21:00:00Z"
   },
   {
@@ -674,9 +674,9 @@
     "fecha": "2026-06-27",
     "local": "Croacia",
     "visitante": "Ghana",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 2,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-27T21:00:00Z"
   },
   {
@@ -684,9 +684,9 @@
     "fecha": "2026-06-27",
     "local": "Colombia",
     "visitante": "Portugal",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 0,
+    "gv_real": 0,
+    "jugado": true,
     "utc_date": "2026-06-27T23:30:00Z"
   },
   {
@@ -694,9 +694,9 @@
     "fecha": "2026-06-27",
     "local": "Rep. Dem. Congo",
     "visitante": "Uzbekistán",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 3,
+    "gv_real": 1,
+    "jugado": true,
     "utc_date": "2026-06-27T23:30:00Z"
   },
   {
@@ -704,9 +704,9 @@
     "fecha": "2026-06-27",
     "local": "Argelia",
     "visitante": "Austria",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 3,
+    "gv_real": 3,
+    "jugado": true,
     "utc_date": "2026-06-28T02:00:00Z"
   },
   {
@@ -714,9 +714,9 @@
     "fecha": "2026-06-27",
     "local": "Jordania",
     "visitante": "Argentina",
-    "gl_real": null,
-    "gv_real": null,
-    "jugado": false,
+    "gl_real": 1,
+    "gv_real": 3,
+    "jugado": true,
     "utc_date": "2026-06-28T02:00:00Z"
   }
 ]
